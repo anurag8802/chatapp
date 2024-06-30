@@ -7,7 +7,9 @@ import messageRoute from "./routes/messageRoute.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { app,server } from "./socket/socket.js";
-dotenv.config({});
+dotenv.config({
+    path:".env"
+})
 
  
 const PORT = process.env.PORT || 8080;
@@ -16,8 +18,9 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 app.use(cookieParser());
+
 const corsOption={
-    origin:'https://lively-rolypoly-010cc0.netlify.app',
+    origin:'https://baatkro.netlify.app/login',
     methods: ["GET","POST"],
     credentials:true
 };
