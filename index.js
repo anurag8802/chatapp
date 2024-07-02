@@ -22,7 +22,7 @@ app.use(cookieParser());
 const corsOption={
     origin:'https://baatkro.netlify.app',
     methods: ["GET","POST"],
-    
+    credentials:true  
 };
 app.use(cors(corsOption)); 
 
